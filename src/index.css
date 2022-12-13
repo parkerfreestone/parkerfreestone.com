@@ -5,7 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.3vw;
+  font-size: 18pt;
 }
 
 body {
@@ -19,9 +19,17 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Darker Grotesque", sans-serif;
+  font-family: "Space grotesk", sans-serif;
 }
 
 h1 {
   font-size: 12vw;
+}
+
+h2 {
+  font-size: 8vw;
+}
+
+h3 {
+  font-size: 7vw;
 }
