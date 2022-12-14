@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBarsStaggered, faClose } from "@fortawesome/free-solid-svg-icons";
-import { MobileMenu } from "./mobile-menu/MobileMenu";
+import { MobileMenu } from "../mobile-menu/MobileMenu";
 import "./TopNav.css";
 
 export const TopNav = () => {

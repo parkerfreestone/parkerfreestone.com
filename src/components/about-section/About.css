@@ -1,0 +1,51 @@
+.about {
+  padding: 4rem;
+  border-bottom: 3px solid var(--dark);
+}
+
+.about h2 {
+  font-size: 5rem;
+}
+
+.sub-text-large {
+  font-size: 2.5rem;
+}
+
+.bg-blue {
+  background-color: var(--blue);
+}
+
+.bg-green {
+  background-color: var(--green);
+}
+
+.bg-purple {
+  background-color: var(--purple);
+}
+
+.hobbies {
+  padding: 4rem;
+  border-bottom: 3px solid var(--dark);
+}
+
+.hobbies h2 {
+  font-size: 5rem;
+}
+
+.hobbie-cards {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+
+.card {
+  flex: 1;
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  border: 3px solid var(--dark);
+  box-shadow: 5px 5px 0 var(--dark);
+}
+
+.card h3 {
+  font-size: 4rem;
+}

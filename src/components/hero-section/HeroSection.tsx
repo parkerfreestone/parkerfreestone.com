@@ -1,4 +1,6 @@
-import HeroGraphic from "../../../graphics/ux-ui-graphic.svg";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import HeroGraphic from "../../graphics/ux-ui-graphic.svg";
 import "./HeroSection.css";
 
 export const HeroSection = () => {
@@ -8,7 +10,10 @@ export const HeroSection = () => {
         <h2>full-stack</h2>
         <h3 className="sub-text">website developer</h3>
         <div className="keep-scrolling-badge">
-          <p>psst... keep scrolling!</p>
+          <p>
+            psst... keep scrolling!{" "}
+            <FontAwesomeIcon className="arrow" icon={faCaretDown} />
+          </p>
         </div>
       </div>
       <div className="right-hero-item">

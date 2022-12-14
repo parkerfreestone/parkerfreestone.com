@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { CSSTransition } from "react-transition-group";
-import "../TopNav.css";
+import "../top-nav/TopNav.css";
 import "./MobileMenu.css";
 
 interface MobileMenuProps {
