@@ -1,8 +1,4 @@
-import {
-  faFirefox,
-  faGithub,
-  faInternetExplorer,
-} from "@fortawesome/free-brands-svg-icons";
+import { faFirefox, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Projects.css";
 
@@ -30,6 +26,7 @@ export const ProjectsSection = () => {
             href="https://github.com/parkerfreestone/kruitbosch-painting"
             className="btn-neutral"
             target="_blank"
+            rel="noreferrer"
           >
             <FontAwesomeIcon icon={faGithub} style={{ marginRight: ".5rem" }} />
             github
@@ -38,6 +35,7 @@ export const ProjectsSection = () => {
             href="https://chimerical-begonia-f4bbf6.netlify.app/"
             className="btn-neutral"
             target="_blank"
+            rel="noreferrer"
           >
             <FontAwesomeIcon
               icon={faFirefox}
