@@ -1,4 +1,5 @@
 import {
+  faFirefox,
   faGithub,
   faInternetExplorer,
 } from "@fortawesome/free-brands-svg-icons";
@@ -9,10 +10,10 @@ export const ProjectsSection = () => {
   return (
     <div className="projects bg-green">
       <h2>current projects</h2>
-      <div className="hobbie-cards">
+      <div className="project-cards">
         <div className="card bg-blue">
-          <h3>cosma social</h3>
-          <p className="sub-text-large">social media site</p>
+          <h3>cosma</h3>
+          <p className="sub-text-large">social media</p>
           <a
             href="https://github.com/parkerfreestone/Cosma"
             className="btn-neutral"
@@ -28,6 +29,7 @@ export const ProjectsSection = () => {
           <a
             href="https://github.com/parkerfreestone/kruitbosch-painting"
             className="btn-neutral"
+            target="_blank"
           >
             <FontAwesomeIcon icon={faGithub} style={{ marginRight: ".5rem" }} />
             github
@@ -35,9 +37,10 @@ export const ProjectsSection = () => {
           <a
             href="https://chimerical-begonia-f4bbf6.netlify.app/"
             className="btn-neutral"
+            target="_blank"
           >
             <FontAwesomeIcon
-              icon={faInternetExplorer}
+              icon={faFirefox}
               style={{ marginRight: ".5rem" }}
             />
             live

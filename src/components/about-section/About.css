@@ -33,14 +33,13 @@
 }
 
 .hobbie-cards {
-  display: flex;
-  justify-content: space-evenly;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .card {
   flex: 1;
-  margin-top: 1rem;
+  margin: 1rem;
   padding: 0.5rem 1.5rem;
   border: 3px solid var(--dark);
   box-shadow: 5px 5px 0 var(--dark);
@@ -48,4 +47,38 @@
 
 .card h3 {
   font-size: 4rem;
+}
+
+@media screen and (max-width: 1340px) {
+  .hobbie-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 665px) {
+  .about {
+    padding: 1rem;
+    border-bottom: 3px solid var(--dark);
+  }
+
+  .about h2 {
+    font-size: 3rem;
+  }
+
+  .about .sub-text-large {
+    font-size: 1.5rem;
+  }
+
+  .hobbies {
+    padding: 1rem;
+    border-bottom: 3px solid var(--dark);
+  }
+
+  .hobbies h2 {
+    font-size: 3rem;
+  }
+
+  .hobbies .sub-text-large {
+    font-size: 1.5rem;
+  }
 }
