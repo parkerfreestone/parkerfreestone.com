@@ -1,14 +1,15 @@
-@import "./theme.css";
+@import './theme.css';
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 18pt;
 }
 
 body {
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -19,7 +20,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Space grotesk", sans-serif;
+  font-family: 'Space grotesk', sans-serif;
 }
 
 h1 {

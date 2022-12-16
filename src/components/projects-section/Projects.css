@@ -2,9 +2,13 @@
   padding: 4rem;
 }
 
+.bg-yellow {
+  background-color: var(--yellow);
+}
+
 .project-cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .projects h2 {
@@ -16,15 +20,28 @@
   padding: 0.5rem 1.5rem;
   margin: 0.5rem 0.5rem 0.5rem 0;
   border-radius: 0;
+  font-size: 0.8rem;
   color: var(--dark);
   text-decoration: none;
   border: 3px solid var(--dark);
   background-color: var(--light);
   box-shadow: 5px 5px 0 var(--dark);
-  background-image: url("../../graphics/button-squares.svg");
+  background-image: url('../../graphics/button-squares.svg');
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: center;
+}
+
+.middle-card {
+  margin: 1rem;
+}
+
+.start-card {
+  margin: 1rem 1rem 1rem 0;
+}
+
+.end-card {
+  margin: 1rem 0 1rem 1rem;
 }
 
 .btn-neutral:hover {

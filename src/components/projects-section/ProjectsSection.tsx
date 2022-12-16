@@ -1,49 +1,72 @@
-import { faFirefox, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./Projects.css";
+import { faFirefox, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faF } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import './Projects.css';
+
+const projects = [
+  {
+    name: 'cosma',
+    subHeading: 'social media',
+    githubLink: 'https://github.com/parkerfreestone/Cosma',
+    color: 'bg-yellow',
+  },
+  {
+    name: 'kruitbosch',
+    subHeading: 'painting inc.',
+    githubLink: 'https://github.com/parkerfreestone/kruitbosch-painting',
+    liveLink: 'https://chimerical-begonia-f4bbf6.netlify.app/',
+    color: 'bg-blue',
+  },
+  {
+    name: 'vehservoir',
+    subHeading: 'reservation app',
+    githubLink: 'https://github.com/utahstate/vehservoir',
+    liveLink: 'https://reserve.usu.edu',
+    color: 'bg-purple',
+  },
+];
 
 export const ProjectsSection = () => {
   return (
-    <div className="projects bg-green">
+    <div id="projects" className="projects bg-green">
       <h2>current projects</h2>
-      <div className="project-cards">
-        <div className="card bg-blue">
-          <h3>cosma</h3>
-          <p className="sub-text-large">social media</p>
-          <a
-            href="https://github.com/parkerfreestone/Cosma"
-            className="btn-neutral"
-          >
-            <FontAwesomeIcon icon={faGithub} style={{ marginRight: ".5rem" }} />
-            github
-          </a>
-        </div>
-        {/* <div className="is-excellent">excellent! 👍</div> */}
-        <div className="card bg-purple">
-          <h3>kruitbosch</h3>
-          <p className="sub-text-large">painting inc.</p>
-          <a
-            href="https://github.com/parkerfreestone/kruitbosch-painting"
-            className="btn-neutral"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FontAwesomeIcon icon={faGithub} style={{ marginRight: ".5rem" }} />
-            github
-          </a>
-          <a
-            href="https://chimerical-begonia-f4bbf6.netlify.app/"
-            className="btn-neutral"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FontAwesomeIcon
-              icon={faFirefox}
-              style={{ marginRight: ".5rem" }}
-            />
-            live
-          </a>
-        </div>
+      <div className="hobbie-cards">
+        {projects.map(
+          ({ name, subHeading, githubLink, liveLink, color }, i, a) => (
+            <div
+              className={`card ${color} ${
+                i === 3
+                  ? 'middle-card'
+                  : i === 0
+                  ? 'start-card'
+                  : i === a.length - 1
+                  ? 'end-card'
+                  : null
+              }`}
+            >
+              <h3>{name}</h3>
+              <p className="sub-text-large">{subHeading}</p>
+              {githubLink && (
+                <a href={githubLink} className="btn-neutral">
+                  <FontAwesomeIcon
+                    icon={faGithub}
+                    style={{ marginRight: '.5rem' }}
+                  />
+                  github
+                </a>
+              )}
+              {liveLink && (
+                <a href={liveLink} className="btn-neutral">
+                  <FontAwesomeIcon
+                    icon={faFirefox}
+                    style={{ marginRight: '.5rem' }}
+                  />
+                  live
+                </a>
+              )}
+            </div>
+          )
+        )}
       </div>
     </div>
   );
