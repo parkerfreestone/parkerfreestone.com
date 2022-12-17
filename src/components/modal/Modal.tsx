@@ -1,6 +1,6 @@
 import { faLongArrowAltRight, faX } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useState } from 'react';
+import { SyntheticEvent, useState } from 'react';
 import './Modal.css';
 
 type FormData = {
@@ -14,6 +14,12 @@ interface HireMeModalProps {
   setOpen: (isOpen: boolean) => void;
 }
 
+const encode = (data: any) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+};
+
 export const HireMeModal = ({ setOpen }: HireMeModalProps) => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
@@ -21,6 +27,18 @@ export const HireMeModal = ({ setOpen }: HireMeModalProps) => {
     phone: '',
     projectDescription: '',
   });
+
+  const handleSubmit = (e: SyntheticEvent) => {
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'hire-me': 'contact', ...formData }),
+    })
+      .then(() => alert('Success!'))
+      .catch((error) => alert(error));
+
+    e.preventDefault();
+  };
 
   return (
     <div className="modal-background">
@@ -31,7 +49,7 @@ export const HireMeModal = ({ setOpen }: HireMeModalProps) => {
             <FontAwesomeIcon icon={faX} />
           </button>
         </div>
-        <form className="modal-form">
+        <form name="hire-me" className="modal-form" onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name">name:</label>
             <input
