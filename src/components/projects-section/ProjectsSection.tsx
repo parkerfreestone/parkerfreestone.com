@@ -1,6 +1,5 @@
 import { faFirefox, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import './Projects.css';
 
 const projects = [
   {
@@ -27,9 +26,9 @@ const projects = [
 
 export const ProjectsSection = () => {
   return (
-    <div id="projects" className="projects bg-green">
+    <div id="projects" className="container bg-green">
       <h2>current projects</h2>
-      <div className="hobbie-cards">
+      <div className="col-3">
         {projects.map(
           ({ name, subHeading, githubLink, liveLink, color }, i, a) => (
             <div className={`card ${color}`}>

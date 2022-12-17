@@ -26,10 +26,3 @@
   height: 0vh;
   transition: 200ms;
 }
-
-.divider {
-  border-top: 1px solid var(--neutral);
-  padding-top: 1rem;
-  display: flex;
-  flex-direction: column;
-}

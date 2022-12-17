@@ -27,39 +27,6 @@
   gap: 1rem;
 }
 
-.form-group {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.btn-plain {
-  display: inline-block;
-  padding: 0.25rem 1rem;
-  margin: 0.5rem 0.5rem 0.5rem 0;
-  border-radius: 0;
-  font-size: 0.8rem;
-  color: var(--dark);
-  text-decoration: none;
-  border: 3px solid var(--dark);
-  box-shadow: 5px 5px 0 var(--dark);
-}
-
-input[type='text'],
-input[type='tel'] {
-  font-size: 0.8rem;
-  padding: 0.25rem 1rem;
-  border: 3px solid var(--dark);
-}
-
-textarea {
-  font-size: 0.8rem;
-  padding: 0.25rem 1rem;
-  border: 3px solid var(--dark);
-  resize: none;
-}
-
 .modal-header {
   display: flex;
   align-items: center;

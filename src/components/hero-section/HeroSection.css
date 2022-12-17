@@ -1,9 +1,3 @@
-.grid-container {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
 .left-hero-item {
   padding: 4rem 0rem 4rem 4rem;
   background: var(--green);
@@ -20,13 +14,6 @@
   display: grid;
   place-items: center;
   border-bottom: 3px solid var(--dark);
-}
-
-.sub-text {
-  font-weight: 300;
-  font-family: "Montserrat";
-  font-size: 1.5rem;
-  line-height: 0.1rem;
 }
 
 .ux-text {
@@ -46,10 +33,6 @@
 }
 
 @media screen and (max-width: 1030px) {
-  .grid-container {
-    grid-template-columns: 1fr;
-  }
-
   .left-hero-item {
     padding: 0;
     padding: 3rem 0 3rem 0;

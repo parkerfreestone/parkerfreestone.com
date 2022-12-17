@@ -4,8 +4,7 @@ import {
   faSnowboarding,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import '../projects-section/Projects.css';
-import './About.css';
+import { skills } from './skills';
 
 const hobbies = [
   {
@@ -28,20 +27,25 @@ const hobbies = [
 export const AboutSection = () => {
   return (
     <>
-      <div id="aboutme" className="about bg-blue">
+      <div id="aboutme" className="container bg-blue">
         <h2>about me</h2>
         <p className="sub-text-large">
           hey! i am a programmer passionate about new technology, and
-          implementing web-based <br /> solutions to solve problems
+          implementing web-based solutions to solve problems
         </p>
+        <h2>skills</h2>
+        {skills.map((skill) => (
+          <div className="chip">{skill.toLowerCase()}</div>
+        ))}
+        <div className="chip">+ probably more that i forgot...</div>
       </div>
 
-      <div className="hobbies">
+      <div className="container">
         <h2>outside of work</h2>
         <p className="sub-text-large">
           crazy to say, but i don't just write code
         </p>
-        <div className="hobbie-cards">
+        <div className="col-3">
           {hobbies.map(({ heading, icon, color }, i, a) => (
             <div
               className={`card ${color} ${
