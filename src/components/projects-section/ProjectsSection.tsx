@@ -1,5 +1,4 @@
 import { faFirefox, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faF } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Projects.css';
 

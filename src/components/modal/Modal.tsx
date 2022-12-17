@@ -1,6 +1,6 @@
 import { faLongArrowAltRight, faX } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { SyntheticEvent, useState } from 'react';
+import { useState } from 'react';
 import './Modal.css';
 
 type FormData = {

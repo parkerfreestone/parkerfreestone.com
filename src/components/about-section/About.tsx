@@ -1,5 +1,4 @@
 import {
-  faF,
   faFilm,
   faGamepad,
   faSnowboarding,
