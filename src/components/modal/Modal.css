@@ -36,7 +36,7 @@
 
 .btn-plain {
   display: inline-block;
-  padding: 0.5rem 1.5rem;
+  padding: 0.25rem 1rem;
   margin: 0.5rem 0.5rem 0.5rem 0;
   border-radius: 0;
   font-size: 0.8rem;
@@ -58,4 +58,21 @@ textarea {
   padding: 0.25rem 1rem;
   border: 3px solid var(--dark);
   resize: none;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.modal-header h2 {
+  font-size: 1.8rem;
+}
+
+.modal .modal-header button {
+  background: none;
+  border: none;
 }

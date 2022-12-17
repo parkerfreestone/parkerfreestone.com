@@ -62,7 +62,7 @@ export const TopNav = () => {
           </div>
         </div>
       </nav>
-      {hireModalOpen && <HireMeModal />}
+      {hireModalOpen && <HireMeModal setOpen={setHireModalOpen} />}
     </>
   );
 };

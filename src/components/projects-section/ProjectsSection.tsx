@@ -33,17 +33,7 @@ export const ProjectsSection = () => {
       <div className="hobbie-cards">
         {projects.map(
           ({ name, subHeading, githubLink, liveLink, color }, i, a) => (
-            <div
-              className={`card ${color} ${
-                i === 3
-                  ? 'middle-card'
-                  : i === 0
-                  ? 'start-card'
-                  : i === a.length - 1
-                  ? 'end-card'
-                  : null
-              }`}
-            >
+            <div className={`card ${color}`}>
               <h3>{name}</h3>
               <p className="sub-text-large">{subHeading}</p>
               {githubLink && (
