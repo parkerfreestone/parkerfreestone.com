@@ -1,10 +1,10 @@
 .mobile-menu {
   width: 100vw;
   height: 100vh;
-  position: absolute;
   background-color: var(--dark);
   display: flex;
   flex-direction: column;
+  position: absolute;
 }
 
 .mobile-menu a {

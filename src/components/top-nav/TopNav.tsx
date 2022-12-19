@@ -11,7 +11,7 @@ export const TopNav = () => {
 
   return (
     <>
-      <nav>
+      <nav className={menuOpen === true ? 'fixed-on-moblie' : undefined}>
         <div className={`${!menuOpen ? 'top' : 'top bg-dark'}`}>
           <h1>parkerfreestone</h1>
           <div className="menu">
@@ -25,7 +25,11 @@ export const TopNav = () => {
           </div>
         </div>
 
-        <MobileMenu open={menuOpen} setOpen={setMenuOpen} />
+        <MobileMenu
+          open={menuOpen}
+          setOpen={setMenuOpen}
+          setHireModalOpen={setHireModalOpen}
+        />
 
         <div className="nav">
           <div>

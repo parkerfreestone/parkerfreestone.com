@@ -1,14 +1,19 @@
-import { useRef } from "react";
-import { CSSTransition } from "react-transition-group";
-import "../top-nav/TopNav.css";
-import "./MobileMenu.css";
+import { useRef } from 'react';
+import { CSSTransition } from 'react-transition-group';
+import '../top-nav/TopNav.css';
+import './MobileMenu.css';
 
 interface MobileMenuProps {
   open: boolean;
   setOpen: (isOpen: boolean) => void;
+  setHireModalOpen: (isOpen: boolean) => void;
 }
 
-export const MobileMenu = ({ open, setOpen }: MobileMenuProps) => {
+export const MobileMenu = ({
+  open,
+  setOpen,
+  setHireModalOpen,
+}: MobileMenuProps) => {
   const nodeRef = useRef(null);
 
   return (
@@ -20,21 +25,29 @@ export const MobileMenu = ({ open, setOpen }: MobileMenuProps) => {
       timeout={200}
     >
       <nav ref={nodeRef} className="mobile-menu">
-        {["about me", "projects", "social"].map((link) => (
+        {['about me', 'projects'].map((link) => (
           <a
             key={link}
-            className={"nav-item"}
-            href={`#${link.replace(/\s+/g, "")}`}
+            className={'nav-item'}
+            href={`#${link.replace(/\s+/g, '')}`}
+            onClick={() => setOpen(false)}
           >
             {link}
           </a>
         ))}
         <div className="divider">
           {[
-            { text: "say hi", route: "#say-hi" },
-            { text: "hire me", route: "hire-me" },
-          ].map(({ text, route }, i) => (
-            <a className="nav-item" href={route}>
+            { text: 'say hi', route: 'mailto:parkerfreestone@gmail.com' },
+            { text: 'hire me', onClick: () => setHireModalOpen(true) },
+          ].map(({ text, route, onClick }, i) => (
+            <a
+              className="nav-item"
+              href={route}
+              onClick={() => {
+                !!onClick && onClick();
+                setOpen(false);
+              }}
+            >
               {text}
             </a>
           ))}
