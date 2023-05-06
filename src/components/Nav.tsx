@@ -1,6 +1,11 @@
-import { Menu } from "lucide-react";
+import { Menu, FileText, Palette } from "lucide-react";
+import { globalThemes, useTheme } from "../hooks/useTheme";
+
+const navLinks = ["Home", "Experience", "Projects", "Contact"];
 
 export const Nav = () => {
+  const [theme, setTheme] = useTheme();
+
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -12,33 +17,13 @@ export const Nav = () => {
             tabIndex={0}
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
+            {navLinks.map((link) => (
+              <li>
+                <a>{link}</a>
+              </li>
+            ))}
             <li>
-              <a>Item 1</a>
-            </li>
-            <li tabIndex={0}>
-              <a className="justify-between">
-                Parent
-                <svg
-                  className="fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-                </svg>
-              </a>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a>Item 3</a>
+              <a>Resume</a>
             </li>
           </ul>
         </div>
@@ -60,8 +45,23 @@ export const Nav = () => {
           </li>
         </ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn"></a>
+      <div className="navbar-end gap-2">
+        <select
+          onChange={(e) => setTheme(e.target.value)}
+          className="select select-bordered"
+        >
+          <option disabled selected>
+            <Palette />
+            Theme
+          </option>
+          {globalThemes.map((theme) => (
+            <option className="normal-case">{theme}</option>
+          ))}
+        </select>
+        <a className="btn btn-primary gap-2">
+          <FileText />
+          Resume
+        </a>
       </div>
     </div>
   );
