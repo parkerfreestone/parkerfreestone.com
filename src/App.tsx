@@ -1,6 +1,6 @@
 import { Nav } from "./components/Nav";
 import { Contact } from "./components/sections/Contact";
-import { Experience } from "./components/sections/Experience";
+import { About } from "./components/sections/About";
 import { Hero } from "./components/sections/Hero";
 import { Projects } from "./components/sections/Projects";
 
@@ -9,7 +9,7 @@ const App = () => {
     <>
       <Nav />
       <Hero />
-      <Experience />
+      <About />
       <Projects />
       <Contact />
     </>

@@ -1,7 +1,7 @@
 import { Menu, FileText, Palette } from "lucide-react";
 import { globalThemes, useTheme } from "../hooks/useTheme";
 
-const navLinks = ["Home", "Experience", "Projects", "Contact"];
+const navLinks = ["Home", "About Me", "Projects", "Contact"];
 
 export const Nav = () => {
   const [theme, setTheme] = useTheme();
