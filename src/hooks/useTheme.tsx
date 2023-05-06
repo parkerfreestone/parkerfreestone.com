@@ -2,17 +2,15 @@ import { useState, useEffect } from "react";
 
 export const globalThemes = [
   "light",
-  "dark",
   "cupcake",
   "bumblebee",
   "synthwave",
-  "cyberpunk",
   "garden",
   "luxury",
   "coffee",
 ];
 
-const DEFAULT_THEME = globalThemes[1];
+const DEFAULT_THEME = globalThemes[0];
 
 export const useTheme = (): [
   string,

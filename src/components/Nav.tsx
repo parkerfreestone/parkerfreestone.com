@@ -7,7 +7,7 @@ export const Nav = () => {
   const [theme, setTheme] = useTheme();
 
   return (
-    <div className="navbar bg-base-100">
+    <div className="sticky top-0 z-20 navbar bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -19,7 +19,7 @@ export const Nav = () => {
           >
             {navLinks.map((link) => (
               <li>
-                <a>{link}</a>
+                <a href={`#${link.toLowerCase()}`}>{link}</a>
               </li>
             ))}
             <li>
@@ -31,18 +31,11 @@ export const Nav = () => {
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li>
-            <a>Home</a>
-          </li>
-          <li>
-            <a>Experience</a>
-          </li>
-          <li>
-            <a>Projects</a>
-          </li>
-          <li>
-            <a>Contact</a>
-          </li>
+          {navLinks.map((link) => (
+            <li>
+              <a href={`#${link.toLowerCase()}`}>{link}</a>
+            </li>
+          ))}
         </ul>
       </div>
       <div className="navbar-end gap-2">
