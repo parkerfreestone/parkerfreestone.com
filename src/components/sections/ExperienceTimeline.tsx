@@ -36,7 +36,7 @@ const journeyData = [
     type: "Experience",
     title: "Cap-2 Associate",
     company: "Walmart",
-    period: "January 2020 - July 2021",
+    period: "January 2020 - July 2020",
   },
   {
     type: "Education",
