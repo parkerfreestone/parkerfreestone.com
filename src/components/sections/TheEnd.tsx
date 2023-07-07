@@ -1,4 +1,4 @@
-import { Code, Link } from "lucide-react";
+import { Code } from "lucide-react";
 
 const repoData = [
   {
