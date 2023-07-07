@@ -1,32 +1,34 @@
-import React from "../../assets/logos/react-logo.png";
-import Tailwind from "../../assets/logos/tailwind-logo.png";
-import Postgres from "../../assets/logos/postgres-logo.png";
+import TerminalAnimation from "../TerminalAnimation";
 
 export const About = () => {
   return (
-    <div id="experience" className="bg-base py-24">
-      <div className="flex gap-12 p-6 max-w-7xl m-auto">
-        <div className="mockup-code">
-          <pre data-prefix="$">
-            <code>npm i about-me</code>
-          </pre>
-          <pre data-prefix=">" className="text-warning">
-            <code>installing...</code>
-          </pre>
-          <pre data-prefix=">" className="text-success">
-            <code>Done!</code>
-          </pre>
-        </div>
+    <div id="about me" className="bg-base py-32">
+      <div className="flex flex-col lg:flex-row gap-12 p-6 max-w-7xl m-auto">
+        <TerminalAnimation />
         <div>
-          <h2 className="text-5xl font-bold">About Me 📝</h2>
-          <p className="py-6 text-xl">
+          <h2
+            data-aos="fade-right"
+            data-aos-delay="50"
+            className="text-4xl lg:text-5xl font-bold text-center lg:text-left"
+          >
+            About Me
+          </h2>
+          <p
+            data-aos="fade-up"
+            data-aos-delay="100"
+            className="py-6 text-xl lg:text-left"
+          >
             I'm currently a Junior Developer at UC, Riverside. I'm passionate
             about coding, design, anime, free software (Arch btw), and
             skateboarding. As a developer, I aim to create meaningful tech
             solutions while infusing my unique perspective from my personal life
             into my work.
           </p>
-          <p className="py-6 text-xl">
+          <p
+            data-aos="fade-up"
+            data-aos-delay="150"
+            className="py-6 text-xl lg:text-left"
+          >
             Fueled by my love for coffee, I'm always eager to learn and take on
             new challenges. Explore my portfolio to see my projects, and feel
             free to connect with me to chat or discuss new opportunities!

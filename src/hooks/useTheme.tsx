@@ -2,12 +2,19 @@ import { useState, useEffect } from "react";
 
 export const globalThemes = [
   "light",
+  "dark",
   "cupcake",
   "bumblebee",
-  "synthwave",
-  "garden",
-  "luxury",
-  "coffee",
+  "emerald",
+  "retro",
+  "wireframe",
+  "dracula",
+  "lemonade",
+  "night",
+  "cmyk",
+  "autumn",
+  "business",
+  "acid",
 ];
 
 const DEFAULT_THEME = globalThemes[0];
